@@ -1,0 +1,147 @@
+<!-- Google Fonts Lato -->
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+
+<form action="https://formspree.io/f/mgovorjq" method="POST" enctype="multipart/form-data"
+style="max-width:950px;margin:auto;font-family:'Lato', Arial, sans-serif;
+background:#ffffff;padding:25px;border-radius:12px;color:#232323; display:flex; flex-direction:column; gap:25px; box-shadow:0 5px 20px rgba(0,0,0,0.08);">
+
+  <!-- Projet ECOCUP -->
+  <h2 style="color:#000;margin:0;">Projet ECOCUP</h2>
+
+  <div style="display:flex; flex-wrap:wrap; gap:15px;">
+    <!-- Référence ECOCUP -->
+    <div style="flex:1 1 200px; display:flex; flex-direction:column;">
+      <label style="font-weight:bold;margin-bottom:5px;color:#000;">Choisissez votre/vos référence(s) *</label>
+      <select name="reference" required
+        style="width:100%;padding:12px;border:1px solid #ccc;border-radius:5px;background:#d9d9d9;color:#232323;font-family:'Lato', sans-serif;">
+        <option value="">-- Sélectionnez --</option>
+        <option value="ECOCUP-50">ECOCUP-50</option>
+        <option value="ECOCUP-250">ECOCUP-250</option>
+        <option value="ECOCUP-500">ECOCUP-500</option>
+        <option value="ECOCUP-1500">ECOCUP-1500</option>
+      </select>
+    </div>
+
+    <!-- Type de personnalisation -->
+    <div style="flex:1 1 200px; display:flex; flex-direction:column;">
+      <label style="font-weight:bold;margin-bottom:5px;color:#000;">Type de personnalisation *</label>
+      <select id="customType" name="customType" required
+        style="width:100%;padding:12px;border:1px solid #ccc;border-radius:5px;background:#d9d9d9;color:#232323;font-family:'Lato', sans-serif;">
+        <option value="">-- Sélectionnez --</option>
+        <option value="none">Aucune</option>
+        <option value="1print">1 impression numérique</option>
+      </select>
+    </div>
+
+    <!-- Quantité -->
+    <div style="flex:1 1 200px; display:flex; flex-direction:column;">
+      <label style="font-weight:bold;margin-bottom:5px;color:#000;">Quantité *</label>
+      <select name="quantite" required
+        style="width:100%;padding:12px;border:1px solid #ccc;border-radius:5px;background:#d9d9d9;color:#232323;font-family:'Lato', sans-serif;">
+        <option value="">-- Sélectionnez --</option>
+        <option value="50">50</option>
+        <option value="75">75</option>
+        <option value="100">100</option>
+        <option value="150">150</option>
+        <option value="200">200</option>
+        <option value="250">250</option>
+        <option value="300">300</option>
+        <option value="400">400</option>
+        <option value="500">500</option>
+        <option value="600">600</option>
+        <option value="700">700</option>
+        <option value="800">800</option>
+        <option value="900">900</option>
+        <option value="1000">1000</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Joindre fichier (apparait si 1 impression sélectionnée) -->
+  <div id="fileUploadDiv" style="display:none; flex-direction:column;">
+    <label style="font-weight:bold;margin-bottom:5px;color:#000;">Joignez un fichier</label>
+    <input type="file" name="projectFile" accept=".pdf,.jpeg,.jpg,.png"
+      style="width:100%;padding:10px;border:1px solid #ccc;border-radius:5px;background:#d9d9d9;color:#232323;font-family:'Lato', sans-serif;">
+  </div>
+
+  <!-- Coordonnées -->
+  <h2 style="color:#000;margin:0;">Coordonnées</h2>
+
+  <!-- Ligne 1 : Nom / Prénom + Entreprise -->
+  <div style="display:flex; gap:15px; flex-wrap:wrap;">
+    <div style="flex:1 1 400px; display:flex; flex-direction:column;">
+      <label style="font-weight:bold;margin-bottom:5px;color:#000;">Nom / Prénom *</label>
+      <input type="text" name="nom_prenom" required placeholder="Votre nom et prénom"
+        style="width:100%;padding:12px;border:1px solid #ccc;border-radius:5px;background:#d9d9d9;color:#232323;font-family:'Lato', sans-serif;">
+    </div>
+    <div style="flex:1 1 400px; display:flex; flex-direction:column;">
+      <label style="font-weight:bold;margin-bottom:5px;color:#000;">Entreprise</label>
+      <input type="text" name="entreprise" placeholder="Nom de votre entreprise"
+        style="width:100%;padding:12px;border:1px solid #ccc;border-radius:5px;background:#d9d9d9;color:#232323;font-family:'Lato', sans-serif;">
+    </div>
+  </div>
+
+  <!-- Ligne 2 : Adresse + Ville -->
+  <div style="display:flex; gap:15px; flex-wrap:wrap;">
+    <div style="flex:2 1 600px; display:flex; flex-direction:column;">
+      <label style="font-weight:bold;margin-bottom:5px;color:#000;">Adresse</label>
+      <input type="text" name="adresse" placeholder="Ex : 12 rue du Marché"
+        style="width:100%;padding:12px;border:1px solid #ccc;border-radius:5px;background:#d9d9d9;color:#232323;font-family:'Lato', sans-serif;">
+    </div>
+    <div style="flex:1 1 300px; display:flex; flex-direction:column;">
+      <label style="font-weight:bold;margin-bottom:5px;color:#000;">Ville *</label>
+      <input type="text" name="ville" required placeholder="Votre ville"
+        style="width:100%;padding:12px;border:1px solid #ccc;border-radius:5px;background:#d9d9d9;color:#232323;font-family:'Lato', sans-serif;">
+    </div>
+  </div>
+
+  <!-- Ligne 3 : Téléphone + Email -->
+  <div style="display:flex; gap:15px; flex-wrap:wrap;">
+    <div style="flex:1 1 400px; display:flex; flex-direction:column;">
+      <label style="font-weight:bold;margin-bottom:5px;color:#000;">Téléphone *</label>
+      <input type="text" name="telephone" required placeholder="Votre numéro"
+        style="width:100%;padding:12px;border:1px solid #ccc;border-radius:5px;background:#d9d9d9;color:#232323;font-family:'Lato', sans-serif;">
+    </div>
+    <div style="flex:1 1 400px; display:flex; flex-direction:column;">
+      <label style="font-weight:bold;margin-bottom:5px;color:#000;">Adresse Mail *</label>
+      <input type="email" name="email" required placeholder="exemple@mail.com"
+        style="width:100%;padding:12px;border:1px solid #ccc;border-radius:5px;background:#d9d9d9;color:#232323;font-family:'Lato', sans-serif;">
+    </div>
+  </div>
+
+  <!-- Bouton Envoyer -->
+  <div style="flex-basis:100%;">
+    <button type="submit"
+      style="background:#232323;color:#ffffff;padding:14px;border:none;border-radius:6px;width:100%;font-weight:bold;cursor:pointer; transition: background 0.3s;">
+      Envoyer
+    </button>
+  </div>
+
+</form>
+
+<style>
+button[type="submit"]:hover {
+  background:#555;
+}
+
+/* Responsive : bascule en colonne sur mobile */
+@media screen and (max-width: 768px) {
+  form > div {
+    flex-direction: column !important;
+  }
+}
+</style>
+
+<script>
+  // Affiche le champ fichier uniquement si "1 impression numérique" est sélectionné
+  const customSelect = document.getElementById('customType');
+  const fileDiv = document.getElementById('fileUploadDiv');
+
+  customSelect.addEventListener('change', () => {
+    if(customSelect.value === '1print') {
+      fileDiv.style.display = 'flex';
+    } else {
+      fileDiv.style.display = 'none';
+    }
+  });
+</script>
